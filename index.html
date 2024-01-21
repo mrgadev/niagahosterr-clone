@@ -1,0 +1,2042 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Niagahoster</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
+		<!-- Google Icons -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	</head>
+	<style>
+			a {
+				text-decoration: none;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			header nav [class^="container"] ul {
+				list-style: none;
+			}
+			
+			/* Desktop Navbar Style */
+			nav .desktop-navbar {
+				padding: 20px 40px;
+				background: transparent;
+				transition: all 0.4s ease;
+			}
+			
+			
+			
+			nav .desktop-navbar .logo,
+			nav .mobile-navbar .logo {
+				width: 192px;
+				height: 30px;
+				background: url('https://www.niagahoster.co.id/h-assets/svg/icons/logos/niagahoster-logo.svg#svgView(viewBox(0%200%20192%2030))');
+			}
+			
+			nav .desktop-navbar .navbar-menus .navbar-menu * {
+				color: #fff;
+				cursor: pointer;
+			}
+			
+			nav .desktop-navbar  .navbar-menus button {
+				padding: 12px 16px;
+				border: 1px solid #dadce0;
+				border-radius: 5px;
+				color: #fff;
+				font-weight: bold;
+				outline: none;
+				background: transparent;
+			}
+			
+			nav .desktop-navbar .navbar-menus button:hover {
+				opacity: 0.6;
+				cursor: pointer;
+			}
+
+			/* Desktop Navbar Style While Scrolled */
+			nav .desktop-navbar.scrolled {
+				position: fixed;
+				width: 100%;
+				color: #000;
+				background: #fff;
+				transition: all 0.4s ease;
+				box-shadow: 0 5px 20px 3px rgba(0,0,0,0.07);
+				transition: all 0.4s ease;
+			}
+			
+			nav .desktop-navbar.scrolled .logo {
+				width: 192px;
+				height: 30px;
+				background: url('https://www.niagahoster.co.id/h-assets/svg/icons/logos/niagahoster-logo.svg#svgView(viewBox(0%200%20192%2030))');
+				filter: brightness(0) saturate(100%) invert(31%) sepia(96%) saturate(2359%) hue-rotate(198deg) brightness(101%) contrast(108%);
+			}
+			
+			nav .desktop-navbar.scrolled .navbar-menus .navbar-menu * {
+				color: #000;
+			}
+			
+			nav .desktop-navbar.scrolled .navbar-menus button {
+				color: #000;
+				border: 1px solid #000;
+			}
+		
+			/* Desktop MDropdown menu Styles */
+			.dropdown-content-icon {
+				width:44px;
+				height:44px;
+				filter:brightness(0) saturate(100%) invert(31%) sepia(48%) saturate(3594%) hue-rotate(199deg) brightness(102%) contrast(104%);
+			}
+			
+			.dropdown-desktop {
+				background: #fff;
+				transition: all 0.4s ease;
+			}
+			
+			.dropdown-desktop.open {
+				background: #fff;
+				transition: all 0.4s ease;
+			}
+			
+			.dropdown-desktop .dropdown-desktop-item {
+				transition: all 0.4s ease;
+			}
+			
+			.dropdown-desktop .dropdown-desktop-item:hover {
+				transform: scale(1.05);
+				transition: all 0.4s ease;
+				cursor: pointer;
+			}
+			
+			.dropdown-desktop .dropdown-desktop-item .desc p:first-child {
+				font-size: 18px;
+			}
+			
+			.dropdown-desktop .dropdown-desktop-item .desc p:nth-child(2) {
+				font-size: 14px;
+			}
+			
+			.dropdown-hosting-trigger span,
+			.dropdown-vps-trigger span,
+			.dropdown-domain-trigger span {
+				transition: all 0.4s ease;
+			}
+			
+			.dropdown-hosting-trigger.rotate span,
+			.dropdown-vps-trigger.rotate span,
+			.dropdown-domain-trigger.rotate span {
+				transform: rotate(180deg);
+				transition: all 0.4s ease;
+			}
+			
+			.mobile-navbar .mobile-menu .mobile-menu-header .logo {
+				width: 192px;
+				height: 30px;
+				filter:brightness(0) saturate(100%) invert(31%) sepia(48%) saturate(3594%) hue-rotate(199deg) brightness(102%) contrast(104%);
+			}
+			
+			.mobile-navbar .mobile-menu .mobile-body .login-button-mobile {
+				outline: none;
+				border: 2px solid #0d6efd;
+				color: #0d6efd;
+				background: inherit;
+				border-radius: 5px;
+				transition: all 0.4s ease;
+			}
+			
+			.mobile-navbar .mobile-menu .mobile-body .login-button-mobile:hover {
+				background: #cfe2ff;
+				transition: all 0.4s ease;
+			}
+			
+			/* Paket Hosting Section */
+			.paket-hosting-card {
+				transition: all 0.4s ease;	
+			}
+			
+			.paket-hosting-card:hover {
+				transform: scale(1.018);
+				box-shadow: 0 0 20px 5px rgba(0,0,0,0.1);
+				transition: all 0.4s ease;	
+			}
+			
+			/* Footer Section */
+			footer .socmed-icons a img{
+				width:24px;
+				height:24px;
+				filter:brightness(0) saturate(100%) invert(11%) sepia(9%) saturate(4162%) hue-rotate(195deg) brightness(97%) contrast(120%);
+			}
+			
+			footer .desktop-footer-links a {
+				transition: all 0.4s ease;
+			}
+			
+			footer .desktop-footer-links a:hover {
+				color: #223b75;
+				transition: all 0.4s ease;
+			}
+			
+			/* Footer Mobile Menu Section */
+			footer .accordion {
+				
+				--bs-accordion-color: none;
+				--bs-accordion-bg:transparent;
+				--bs-accordion-border-width:0;
+				--bs-accordion-border-color: none;
+				--bs-accordion-border-radius: 0;
+				--bs-accordion-inner-border-radius:0;
+				--bs-accordion-button-bg:transparent;
+				--bs-accordion-button-active-bg:transparent;
+				--bs-accordion-button-active-color: #000;
+
+				--bs-accordion-button-focus-border-color: none;
+				--bs-accordion-button-focus-box-shadow: 0 0 0 0 rgba(0,0,0,0);
+			
+			.accordion-button {
+				padding: 1rem 0;
+				background: transparent;
+			}
+	</style>
+	<body>
+		<!--header section-->
+		<header class="overflow-x-hidden bg-primary h-100">
+			<!--Navbar Section-->
+			<nav>
+				<!-- Navbar Desktop Section -->
+				<section class="desktop-navbar z-1 d-none d-xl-flex justify-content-between align-items-center">
+					<!-- Logo-->
+					<div class="logo">
+					</div>
+					<!-- Navbar Desktop Menu -->
+					<ul class="navbar-menus d-flex fw-semibold gap-5 align-items-center justify-content-center">
+						<!-- Navabr Link Item -->
+						<li class="navbar-menu">
+							<p class="dropdown-hosting-trigger d-flex align-self-center">Hosting <span class="material-symbols-outlined">expand_more</span></p>
+							<!-- Dropdown Menu -->
+							<ul class="dropdown-desktop dropdown-desktop-hosting position-absolute d-none d-flex flex-column gap-3 p-4 rounded shadow">
+								<!-- Dropdown Menu Content 1-->
+								<li class="d-flex gap-2 dropdown-desktop-item align-items-center">
+									<img src="https://niagahoster.co.id/h-assets/svg/icons/product-icons/ic-shared.svg#svgView(viewBox(0 0 44 44))" class="dropdown-content-icon">
+									<!-- Dropdown Item Desc -->
+									<div class="desc d-flex flex-column">
+										<p class="fw-bold text-black text-capitalize mb-2">web hosting</p>
+										<p class="fw-normal text-black text-capitalize mb-2">Paket web hosting terbaik tanpa batas</p>
+									</div>
+								</li>
+								
+								<!-- Dropdown Menu Content 2 -->
+								<li class="d-flex gap-2 dropdown-desktop-item align-items-center">
+									<img src="https://niagahoster.co.id//h-assets/svg/icons/product-icons/ic-cloud.svg#svgView(viewBox(0 0 44 44))" class="dropdown-content-icon">
+									<!-- Dropdown Item Desc -->
+									<div class="desc d-flex flex-column">
+										<p class="fw-bold text-black text-capitalize mb-2">cloud hosting</p>
+										<p class="fw-normal text-black text-capitalize mb-2">Cocok untuk website skala besar</p>
+									</div>
+								</li>
+								
+								<!-- Dropdown Menu Content 3-->
+								<li class="d-flex gap-2 dropdown-desktop-item align-items-center">
+									<img src="https://niagahoster.co.id//h-assets/svg/icons/product-icons/ic-wordpress.svg#svgView(viewBox(0 0 44 44))" class="dropdown-content-icon">
+									<!-- Dropdown Item Desc -->
+									<div class="desc d-flex flex-column">
+										<p class="fw-bold text-black text-capitalize mb-2">wordPress hosting</p>
+										<p class="fw-normal text-black text-capitalize mb-2">Hosting paling optimal untuk WordPress</p>
+									</div>
+								</li>
+								
+								<!-- Dropdown Menu Content 4-->
+								<li class="d-flex gap-2 dropdown-desktop-item align-items-center">
+									<img src="https://niagahoster.co.id/h-assets/svg/icons/product-icons/ic-email.svg#svgView(viewBox(0 0 44 44))" class="dropdown-content-icon">
+									<!-- Dropdown Item Desc -->
+									<div class="desc d-flex flex-column">
+										<p class="fw-bold text-black text-capitalize mb-2">email hosting</p>
+										<p class="fw-normal text-black text-capitalize mb-2">Email profesional, kredibilitas meningkat</p>
+									</div>
+								</li>
+							</ul>
+						</li>
+						
+						<!-- Navabr Link Item -->
+						<li class="navbar-menu">
+							<p class="dropdown-vps-trigger d-flex align-items-center">VPS <span class="material-symbols-outlined">expand_more</span></p>
+							<!-- Dropdown Menu -->
+							<ul class="dropdown-desktop dropdown-desktop-vps position-absolute d-none d-flex flex-column gap-3 p-4 rounded shadow">
+								<!-- Dropdown Menu Content 1-->
+								<li class="d-flex gap-2 dropdown-desktop-item align-items-center">
+									<img src="https://niagahoster.co.id//h-assets/svg/icons/product-icons/ic-vps.svg#svgView(viewBox(0 0 44 44))" class="dropdown-content-icon">
+									<!-- Dropdown Item Desc -->
+									<div class="desc d-flex flex-column">
+										<p class="fw-bold text-black text-capitalize mb-2">VPS hosting</p>
+										<p class="fw-normal text-black text-capitalize mb-2">Kelola server lebih fleksibel & hemat</p>
+									</div>
+								</li>
+								
+								<!-- Dropdown Menu Content 2 -->
+								<li class="d-flex gap-2 dropdown-desktop-item align-items-center">
+									<img src="https://niagahoster.co.id/h-assets/svg/icons/product-icons/ic-cyber-panel.svg#svgView(viewBox(0 0 44 44))" class="dropdown-content-icon">
+									<!-- Dropdown Item Desc -->
+									<div class="desc d-flex flex-column">
+										<p class="fw-bold text-black text-capitalize mb-2">cyberpanel VPS</p>
+										<p class="fw-normal text-black text-capitalize mb-2">Tampilan sederhana, kelola server lebih mudah	</p>	
+									</div>
+								</li>
+							</ul>
+							
+						</li>
+						
+						<!-- Navbar Link Item-->
+						<li class="navbar-menu"><a href="#">Website Builder</a></li>
+						
+						<!-- Navabr Link Item -->
+						<li class="navbar-menu">
+							<p class="dropdown-domain-trigger d-flex align-items-center">Domain <span class="material-symbols-outlined">expand_more</span></p>
+							<!-- Dropdown Menu -->
+							<ul class="dropdown-desktop dropdown-desktop-domain d-none position-absolute d-flex flex-column gap-3 	p-4 rounded shadow">
+								<!-- Dropdown Menu Content 1-->
+								<li class="d-flex gap-2 dropdown-desktop-item align-items-center">
+									<img src="https://niagahoster.co.id//h-assets/svg/icons/product-icons/ic-domain-checker.svg#svgView(viewBox(0 0 44 44))" class="dropdown-content-icon">
+									<!-- Dropdown Item Desc -->
+									<div class="desc d-flex flex-column">
+										<p class="fw-bold text-black text-capitalize mb-2">cari & cek domain</p>
+										<p class="fw-normal text-black text-capitalize mb-2">temukan nama domain impian anda</p>
+									</div>
+								</li>
+								
+								<!-- Dropdown Menu Content 2 -->
+								<li class="d-flex gap-2 dropdown-desktop-item align-items-center">
+									<img src="https://niagahoster.co.id/h-assets/svg/icons/product-icons/ic-whois.svg#svgView(viewBox(0 0 44 44))" class="dropdown-content-icon">
+									<!-- Dropdown Item Desc -->
+									<div class="desc d-flex flex-column">
+										<p class="fw-bold text-black text-uppercase mb-2">whois</p>
+										<p class="fw-normal text-black mb-2">Lihat informasi kepemilikan domain</p>
+									</div>
+								</li>
+								
+								<!-- Dropdown Menu Content 2 -->
+								<li class="d-flex gap-2 dropdown-desktop-item align-items-center">
+									<img src="https://niagahoster.co.id/h-assets/svg/icons/product-icons/ic-domain-transfer.svg#svgView(viewBox(0 0 44 44))" class="dropdown-content-icon">
+									<!-- Dropdown Item Desc -->
+									<div class="desc d-flex flex-column">
+										<p class="fw-bold text-black text-capitalize mb-2">transfer domain</p>
+										<p class="fw-normal text-black mb-2">Migrasi domain lebih mudah dan murah</p>
+									</div>
+								</li>
+							</ul>
+							
+						</li>
+						<button class="py-3 px-4 ms-3 desktop-navbar-login fw-semibold">Log in</button>
+					</ul>
+				</section>
+				
+				<!-- Mobile Menu -->
+				<section class="mobile-navbar d-flex d-xl-none justify-content-between align-items-center p-3 bg-transparent text-white">
+					<!-- Logo-->
+					<div class="logo">
+					</div>
+					
+					<!-- Hamburger Menu -->
+					<span class="material-symbols-outlined mobile-hamburger-menu" style="cursor:pointer;">menu</span>
+					
+					<!-- Mobile Menu Content -->
+					<div class="mobile-menu position-absolute w-100 h-100 top-0 start-0 d-none d-xl-none z-1 px-3 bg-light">
+						<div class="mobile-menu-header py-3 mb-5 d-flex align-items-center justify-content-between">
+							<!-- Logo-->
+							<img src="https://niagahoster.co.id/h-assets/svg/icons/logos/niagahoster-logo.svg#svgView(viewBox(0 0 192 30))" class="logo">
+							
+							<!-- Close Button -->
+							<span class="material-symbols-outlined text-primary mobile-menu-close" style="cursor:pointer;">close</span>
+						</div>
+						
+						<!-- Mobile Menu Body COntent -->
+						<ul class="mobile-body d-flex flex-column gap-3 ps-0">
+							<!-- Individual Mobile Item -->
+							<li class="mobile-body-item">
+								<p class="hosting-mobile-trigger d-flex justify-content-between align-items-center ps-0 text-black fw-bold">Hosting <span class="material-symbols-outlined">chevron_right</span></p>
+
+							</li>
+							<!-- Individual Mobile item -->
+							<li class="mobile-item">
+								<p class="vps-mobile-trigger d-flex justify-content-between align-items-center ps-0 text-black fw-bold">VPS <span class="material-symbols-outlined">chevron_right</span></p>
+
+							</li>
+							<!-- Individual Mobile Item -->
+							<li class="mobile-item">
+								<p class="text-black fw-bold">Website Builder</p>
+							</li>
+							<!-- Individual Mobile Item -->
+							<li class="mobile-item">
+								<p class="domain-mobile-trigger d-flex justify-content-between align-items-center ps-0 text-black fw-bold">Domain <span class="material-symbols-outlined">chevron_right</span></p>
+
+							</li>
+							<button class="login-button-mobile py-3 w-100 justify-self-end fw-bold">Login</button>
+						</ul>				
+					<!-- MObile Menu Content Closing Tag -->
+					</div>
+					
+				</section>
+			</nav>
+			
+			<!-- Hero Section-->
+			<section class="container-fluid hero m-3 p-3 d-flex flex-column flex-xl-row align-items-center justify-content-evenly">
+				<!-- Left hero Section-->
+				<div class="left-hero col-12 col-sm-10 col-md-6 col-lg-5 col-xl-3 d-flex flex-column">
+					<!-- Left hero Heder -->
+					<div class="left-hero-header mb-4">
+						<h1 class="text-capitalize text-light fw-bold">hosting no.1 siap wujudkan website impian!</h1>
+						<p class="mt-3 fw-bold text-light">Diskon Hosting up to</p>
+					</div>
+					<!-- Left hero list -->
+					<ul class="left-hero-list ps-0 d-flex flex-column gap-2 mb-4">
+						<li class="d-flex gap-2 align-items-center text-light fw-medium"><span class="material-symbols-outlined text-success">check</span> Gratis Domain<span class="material-symbols-outlined" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on top">help</span></li>
+						<li class="d-flex gap-2 align-items-center text-light fw-medium"><span class="material-symbols-outlined text-success">check</span> Gratis Migrasi Website<span class="material-symbols-outlined" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on top">help</span></li>
+						<li class="d-flex gap-2 align-items-center text-light fw-medium"><span class="material-symbols-outlined text-success">check</span> Bantuan Pelanggan 24/7</li>
+					</ul>
+					<!--Left hero price-->
+					<div class="left-hero-price text-light">
+						<span>Rp.</span>
+						<span class="fs-1 fw-bold">23.900</span>
+						<span>/bln</span>
+						<p class="fw-bold">+ Gratis 2 Bulan</p>
+					</div>
+					
+					<!-- Countdown Section -->
+					<div class="countdown d-flex align-items-center gap-2 text-light fw-medium fs-4 mb-3">
+						<span id="countdownDays" class="text-light p-3 rounded" style="background: #ffffff1a;">00</span>
+						<span>:</span>
+						<span id="countdownHours" class="text-light p-3 rounded" style="background: #ffffff1a;">00</span>
+						<span>:</span>
+						<span id="countdownMins" class="text-light p-3 rounded" style="background: #ffffff1a;">00</span>
+						<span>:</span>
+						<span id="countdownSecs" class="text-light p-3 rounded" style="background: #ffffff1a;">00</span>		
+					</div>
+					<button type="button" class="btn btn-warning text-light fw-bold py-3 text-center col-9">Dapatkan Sekarang</button>
+					<p class="fs-6 text-light fw-medium d-flex align-items-center mt-3"><span class="material-symbols-outlined">verified_user</span> Garansi 30 hari uang kembali</p>
+				</div>
+				
+				<!-- Right hero (image) section -->
+				<div class="right-hero me-5 pe-3">
+					<img src="https://niagahoster.co.id/_ipx/w_762&f_webp/h-assets/images/pages/homepage-uplift/niaga/header-image-2x.png" class="img-fluid">
+				</div>
+			</section>
+			
+		</header>
+		
+		<!-- Paket Hosting -->
+		<section class="paket-hosting mt-5 pt-1 d-flex flex-column align-items-center justify-content-center">
+			<h1 class="text-black fw-bold mb-5 pb-2">Pilih Paket Hosting Sesuai Kebutuhan Anda</h1>
+			
+			<!-- Paket Hosting Card Container-->
+			<div class="paket-hosting-cards d-flex flex-column flex-xl-row gap-5 container">
+				<!-- Individual Paket Hosting Card-->
+				<div class="paket-hosting-card border rounded d-flex flex-column" style="height: max-content;">
+					<!-- Card HEader -->
+					<div class="paket-hosting-card-header m-4 p-1 d-flex flex-column justify-content-center align-items-center gap-1">
+						<h2 class="fw-bold text-black">Personal</h2>
+						<p class="text-center">Cocok untuk personal branding atau blog Anda</p>
+						<!-- Discount Tag -->
+						<p class="discount d-flex flex-row gap-2 align-items-center">
+							<span class="text-secondary fs-6 text-decoration-line-through fw-medium">119.900</span>
+							<span class="py-1 px-3 rounded-pill text-primary bg-primary-subtle border-primary fw-bold">Diskon 80%</span>
+						</p>
+						<!-- After Discount Price -->
+						<p class="after-discount">
+							<span class="fs-6 fw-medium text-black">Rp</span>
+							<span class="fs-1 fw-bold text-black">23.900</span>
+							<span class="fs-6 fw-medium text-black ">/bln</span>
+						</p>
+						<p class="text-primary fw-bold fs-5">+ Gratis 2 Bulan</p>
+						
+						<button class="btn btn-primary w-75 py-3 fw-bold fs-5">Pilih Paket</button>
+						<p class="mt-1 text-secondary"">Rp49.900 /bln saat perpanjang layanan</p>
+						<hr class="w-100 border border-secondary border-1 opacity-50">
+					</div>
+					
+					<!-- Paket Hosting Body -->
+					<div class="paket-hosting-body mx-4 p-1 d-flex flex-column gap-3">
+						<div class="fitur-unggulan d-flex flex-column gap-3">
+							<h5 class="text-start fw-bold">Fitur Unggulan</h5>
+							<!-- Fitur Unggulan Lists-->
+							<div class="fitur-unggulan-lists d-flex flex-column gap-1" style="font-size: 14px;">
+								<p class="fitur-unggulan-list d-flex flex-row gap-1 text-capitalize"><span class="material-symbols-outlined text-warning fw-bold">check</span>performa <strong>standar</strong></p>
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-warning fw-bold">check</span><b>100</b> website</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="fitur-unggulan-list d-flex flex-row align-items-center gap-1 text-capitalizealign-items-center"><span class="material-symbols-outlined text-warning fw-bold">check</span><b>100 GB</b> SSD storage</p>
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-warning fw-bold">check</span>backup <b>mingguan</b></span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>SSL gratis <b>unlimited</b></span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>unlimited</b> bandwidth</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>email <b>gratis</b></span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>domain <b>gratis</b> (senilai Rp147.900)</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1 text-secondary">
+										<span class="material-symbols-outlined text-warning fw-bold">close</span>CDN <b>gratis</b></span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1 text-secondary">
+										<span class="material-symbols-outlined text-warning fw-bold">close</span>alamat IP <b>dedicated</b></span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+							<!-- Penutup Fitur Unggulan Lists-->
+							</div>
+						<!-- Penutup Fitur Unggulan -->
+						</div>
+						
+						<div class="managed-wp d-flex flex-column gap-3">
+							<h5 class="text-start fw-bold">Managed WordPress</h5>
+							<!-- Managed WP Lists-->
+							<div class="managed-wp-lists d-flex flex-column gap-1" style="font-size: 14px;">
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1 fw-bold text-secondary">
+										<span class="material-symbols-outlined text-warning fw-bold">close</span>
+										WooCommerce
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>gratis </b>migrasi website</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>Gratis</b> instalasi WordPress otomatis</p>
+								
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>WordPress </b>accelerator (LiteSpeed)</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1 text-secondary">
+										<span class="material-symbols-outlined text-warning fw-bold">close</span>update <b>WordPress</b> otomatis</span>
+									</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>WordPress</b> vulnerabilities scanner</span>
+									</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>wordPress</b> multisite</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>WP-CLI</b> dan SSH</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1 text-secondary">
+										<span class="material-symbols-outlined text-warning fw-bold">close</span>
+										tool <b>WordPress</b> staging
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1 text-secondary">
+										<span class="material-symbols-outlined text-warning fw-bold">close</span>
+										<b>Object Cache</b> untuk WordPress
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1  text-secondary">
+										<span class="material-symbols-outlined text-warning fw-bold">close</span>
+										backup <b>sesuai kebutuhan</b>
+									</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1 text-secondary">
+										<span class="material-symbols-outlined text-warning fw-bold">close</span>
+										tool AI <b>wordPress</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+							<!-- Penutup Managed WP Lists-->
+							</div>
+						<!-- Penutup Managed WP -->
+						</div>
+						
+						<div class="web-builder d-flex flex-column gap-3">
+							<h5 class="text-start fw-bold">Website Builder tanpa Coding</h5>
+							<!-- Managed WP Lists-->
+							<div class="web-builder-lists d-flex flex-column gap-1" style="font-size: 14px;">
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span>website builder <b>drag&drop</b></p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>AI</b> untuk buat website</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>150</b> template dari designer profesional</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span>integrasi <b>google analytics</b></p>
+								<p class="web-builder-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										integrasi tool <b>marketing</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>AI</b> copywriting</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>AI</b> heatmap</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span>tool <b>AI</b> SEO</p>
+								<p class="web-builder-list d-flex flex-row justify-content-between align-items-center gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										Fitur khusus <b>eCommerce</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>0%</b> biaya transaksi</p>
+								<p class="web-builder-list d-flex flex-row justify-content-between align-items-center gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										<b>20+</b> Metode Pembayaran
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+							<!-- Penutup Web Builder Lists-->
+							</div>
+						<!-- Penutup Web Builder WP -->
+						</div>
+						
+						<div class="fitur-keamanan d-flex flex-column gap-3">
+							<h5 class="text-start fw-bold">Fitur Keamanan</h5>
+							<!-- Fitur Keamanan Lists-->
+							<div class="fitur-keamanan-lists d-flex flex-column gap-1" style="font-size: 14px;">
+								
+								<p class="fitur-keamanan-list d-flex flex-row align-items-center gap-1 align-items-center">
+										<span class="material-symbols-outlined text-warning fw-bold">check</span>
+										Proteksi DDoS <b>Standar</b>
+								</p>
+								<p class="fitur-keamanan-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>aplikasi web</b> firewall</p>
+								<p class="fitur-keamanan-list d-flex flex-row justify-content-between align-items-center gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										 Nameserver Dilindungi <b>Cloudflare</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="fitur-keamanan-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span>pendeteksi <b>malware</b></p>
+								<p class="fitur-keamanan-list d-flex flex-row justify-content-between align-items-center gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										 <b>Access</b> Manager
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="fitur-keamanan-list d-flex flex-row align-items-center gap-1 text-capitalize"><span class="material-symbols-outlined text-success fw-bold">check</span>gratis proteksi privasi domain WHOIS (senilai Rp147.900)</p>
+							<!-- Penutup Fitur Keamanan Lists-->
+							</div>
+						<!-- Penutup Fitur Keamanan -->
+						</div>
+						
+						<div class="service-support d-flex flex-column gap-3">
+							<h5 class="text-start fw-bold">Service and Support</h5>
+							<!-- Fitur Keamanan Lists-->
+							<div class="service-support-lists d-flex flex-column gap-1" style="font-size: 14px;">
+								
+								<p class="service-support-list d-flex flex-row align-items-center justify-content-between gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										 Jaminan <b>30 Hari</b> Uang Kembali
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="service-support-list d-flex flex-row align-items-center justify-content-between gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										 Jaminan Uptime<b>99,99%</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="service-support-list d-flex flex-row align-items-center justify-content-between gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										<b>Banyak</b> Data Center
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="service-support-list d-flex flex-row align-items-center justify-content-between gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										 Bantuan <b>24/7</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-keamanan-list d-flex flex-row align-items-center gap-1 text-secondary"><span class="material-symbols-outlined text-warning fw-bold">close</span>Bantuan 	 <b>Prioritas</b></p>
+							<!-- Penutup Fitur Keamanan Lists-->
+							</div>
+						<!-- Penutup Fitur Keamanan -->
+						</div>
+					<!-- Penutup Paket Hosting Body -->
+					</div>
+					
+					<!-- Paket Hosting Card Footer -->
+					<p class="paket-hosting-footer text-center m-4 d-flex align-items-center justify-content-center text-primary fw-bold">Lihat Fitur Lengkap<span class="material-symbols-outlined">expand_more</span></p>
+				<!-- Penutup Paket Hosting Card-->
+				</div>
+				
+				<!-- Individual Paket Hosting Card-->
+				<div class="paket-hosting-card position-relative border border-primary rounded d-flex flex-column" style="height: max-content; background:#f5faff;">
+					<span class="position-absolute translate-middle bg-warning-subtle text-warning-emphasis top-0 start-50 badge w-50 py-2 text-uppercase fs-5 rounded-pill">paling laris!</span>
+					<!-- Card HEader -->
+					<div class="paket-hosting-card-header m-4 p-1 d-flex flex-column justify-content-center align-items-center gap-1">
+						<h2 class="fw-bold text-black">Business</h2>
+						<p class="text-center">Paket lengkap untuk bisnis, portal berita, atau toko online</p>
+						<!-- Discount Tag -->
+						<p class="discount d-flex flex-row gap-2 align-items-center">
+							<span class="text-secondary fs-6 text-decoration-line-through fw-medium">119.900</span>
+							<span class="py-1 px-3 rounded-pill text-warning-emphasis bg-warning-subtle fw-bold">Diskon 65%</span>
+						</p>
+						<!-- After Discount Price -->
+						<p class="after-discount">
+							<span class="fs-6 fw-medium text-black">Rp</span>
+							<span class="fs-1 fw-bold text-black">45.900</span>
+							<span class="fs-6 fw-medium text-black ">/bln</span>
+						</p>
+						<p class="text-warning-emphasis fw-bold fs-5">+ Gratis 2 Bulan</p>
+						
+						<button class="btn btn-warning opacity-100 text-light w-75 py-3 fw-bold fs-5">Pilih Paket</button>
+						<p class="mt-1 text-secondary"">Rp93.900 /bln saat perpanjang layanan</p>
+						<hr class="w-100 border border-secondary border-1 opacity-50">
+					</div>
+					
+					<!-- Paket Hosting Body -->
+					<div class="paket-hosting-body mx-4 p-1 d-flex flex-column gap-3">
+						<div class="fitur-unggulan d-flex flex-column gap-3">
+							<h5 class="text-start fw-bold">Fitur Unggulan</h5>
+							<!-- Fitur Unggulan Lists-->
+							<div class="fitur-unggulan-lists d-flex flex-column gap-1" style="font-size: 14px;">
+								<p class="fitur-unggulan-list d-flex flex-row gap-1 text-capitalize"><span class="material-symbols-outlined text-success fw-bold">check</span>performa <strong>meingkat (hingga 5x)</strong></p>
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-warning fw-bold">check</span><b>100</b> website</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="fitur-unggulan-list d-flex flex-row align-items-center gap-1 text-capitalizealign-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>200 GB</b> SSD storage</p>
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>backup <b>harian</b> (senilai Rp274.020)</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>SSL gratis <b>unlimited</b></span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>unlimited</b> bandwidth</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>email <b>gratis</b></span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>domain <b>gratis</b> (senilai Rp147.900)</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>CDN <b>gratis</b></span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1 text-secondary">
+										<span class="material-symbols-outlined text-warning fw-bold">close</span>alamat IP <b>dedicated</b></span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+							<!-- Penutup Fitur Unggulan Lists-->
+							</div>
+						<!-- Penutup Fitur Unggulan -->
+						</div>
+						
+						<div class="managed-wp d-flex flex-column gap-3">
+							<h5 class="text-start fw-bold">Managed WordPress</h5>
+							<!-- Managed WP Lists-->
+							<div class="managed-wp-lists d-flex flex-column gap-1" style="font-size: 14px;">
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1 fw-bold text-secondary">
+										<span class="material-symbols-outlined text-warning fw-bold">check</span>
+										Basic WooCommerce
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>gratis </b>migrasi website</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>Gratis</b> instalasi WordPress otomatis</p>
+								
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>WordPress </b>accelerator (LiteSpeed)</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>update <b>WordPress</b> otomatis</span>
+									</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>WordPress</b> vulnerabilities scanner</span>
+									</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>wordPress</b> multisite</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>WP-CLI</b> dan SSH</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										tool <b>WordPress</b> staging
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										<b>Object Cache</b> untuk WordPress
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										backup <b>sesuai kebutuhan</b>
+									</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										tool AI <b>wordPress</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+							<!-- Penutup Managed WP Lists-->
+							</div>
+						<!-- Penutup Managed WP -->
+						</div>
+						
+						<div class="web-builder d-flex flex-column gap-3">
+							<h5 class="text-start fw-bold">Website Builder tanpa Coding</h5>
+							<!-- Managed WP Lists-->
+							<div class="web-builder-lists d-flex flex-column gap-1" style="font-size: 14px;">
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span>website builder <b>drag&drop</b></p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>AI</b> untuk buat website</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>150</b> template dari designer profesional</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span>integrasi <b>google analytics</b></p>
+								<p class="web-builder-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										integrasi tool <b>marketing</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>AI</b> copywriting</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>AI</b> heatmap</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span>tool <b>AI</b> SEO</p>
+								<p class="web-builder-list d-flex flex-row justify-content-between align-items-center gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										Fitur khusus <b>eCommerce</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>0%</b> biaya transaksi</p>
+								<p class="web-builder-list d-flex flex-row justify-content-between align-items-center gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										<b>20+</b> Metode Pembayaran
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+							<!-- Penutup Web Builder Lists-->
+							</div>
+						<!-- Penutup Web Builder WP -->
+						</div>
+						
+						<div class="fitur-keamanan d-flex flex-column gap-3">
+							<h5 class="text-start fw-bold">Fitur Keamanan</h5>
+							<!-- Fitur Keamanan Lists-->
+							<div class="fitur-keamanan-lists d-flex flex-column gap-1" style="font-size: 14px;">
+								
+								<p class="fitur-keamanan-list d-flex flex-row align-items-center gap-1 align-items-center">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										Proteksi DDoS <b>Maksimal</b>
+								</p>
+								<p class="fitur-keamanan-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>aplikasi web</b> firewall</p>
+								<p class="fitur-keamanan-list d-flex flex-row justify-content-between align-items-center gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										 Nameserver Dilindungi <b>Cloudflare</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="fitur-keamanan-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span>pendeteksi <b>malware</b></p>
+								<p class="fitur-keamanan-list d-flex flex-row justify-content-between align-items-center gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										 <b>Access</b> Manager
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="fitur-keamanan-list d-flex flex-row align-items-center gap-1 text-capitalize"><span class="material-symbols-outlined text-success fw-bold">check</span>gratis proteksi privasi domain WHOIS (senilai Rp147.900)</p>
+							<!-- Penutup Fitur Keamanan Lists-->
+							</div>
+						<!-- Penutup Fitur Keamanan -->
+						</div>
+						
+						<div class="service-support d-flex flex-column gap-3">
+							<h5 class="text-start fw-bold">Service and Support</h5>
+							<!-- Fitur Keamanan Lists-->
+							<div class="service-support-lists d-flex flex-column gap-1" style="font-size: 14px;">
+								
+								<p class="service-support-list d-flex flex-row align-items-center justify-content-between gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										 Jaminan <b>30 Hari</b> Uang Kembali
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="service-support-list d-flex flex-row align-items-center justify-content-between gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										 Jaminan Uptime<b>99,99%</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="service-support-list d-flex flex-row align-items-center justify-content-between gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										<b>Banyak</b> Data Center
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="service-support-list d-flex flex-row align-items-center justify-content-between gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										 Bantuan <b>24/7</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-keamanan-list d-flex flex-row align-items-center gap-1 text-secondary"><span class="material-symbols-outlined text-warning fw-bold">close</span>Bantuan 	 <b>Prioritas</b></p>
+							<!-- Penutup Fitur Keamanan Lists-->
+							</div>
+						<!-- Penutup Fitur Keamanan -->
+						</div>
+					<!-- Penutup Paket Hosting Body -->
+					</div>
+					
+					<!-- Paket Hosting Card Footer -->
+					<p class="paket-hosting-footer text-center m-4 d-flex align-items-center justify-content-center text-primary fw-bold">Lihat Fitur Lengkap<span class="material-symbols-outlined">expand_more</span></p>
+				<!-- Penutup Paket Hosting Card-->
+				</div>
+				
+				<!-- Individual Paket Hosting Card-->
+				<div class="paket-hosting-card border rounded d-flex flex-column">
+					<!-- Card HEader -->
+					<div class="paket-hosting-card-header m-4 p-1 d-flex flex-column justify-content-center align-items-center gap-1">
+						<h2 class="fw-bold text-black">Cloud Startup</h2>
+						<p class="text-center">Performa website yang lebih optimal & dedicated resource</p>
+						<!-- Discount Tag -->
+						<p class="discount d-flex flex-row gap-2 align-items-center">
+							<span class="text-secondary fs-6 text-decoration-line-through fw-medium">349.000</span>
+							<span class="py-1 px-3 rounded-pill text-primary bg-primary-subtle border-primary fw-bold">Diskon 57%</span>
+						</p>
+						<!-- After Discount Price -->
+						<p class="after-discount">
+							<span class="fs-6 fw-medium text-black">Rp</span>
+							<span class="fs-1 fw-bold text-black">150.000</span>
+							<span class="fs-6 fw-medium text-black ">/bln</span>
+						</p>
+						<p class="text-primary fw-bold fs-5">+ Gratis 2 Bulan</p>
+						
+						<button class="btn btn-primary w-75 py-3 fw-bold fs-5">Pilih Paket</button>
+						<p class="mt-1 text-secondary"">Rp199.000 /bln saat perpanjang layanan</p>
+						<hr class="w-100 border border-secondary border-1 opacity-50">
+					</div>
+					
+					<!-- Paket Hosting Body -->
+					<div class="paket-hosting-body mx-4 p-1 d-flex flex-column gap-3">
+						<div class="fitur-unggulan d-flex flex-column gap-3">
+							<h5 class="text-start fw-bold">Fitur Unggulan</h5>
+							<!-- Fitur Unggulan Lists-->
+							<div class="fitur-unggulan-lists d-flex flex-column gap-1" style="font-size: 14px;">
+								<p class="fitur-unggulan-list d-flex flex-row gap-1 text-capitalize"><span class="material-symbols-outlined text-success fw-bold">check</span>performa <strong>maksimal (hingga 10x)</strong></p>
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>300</b> website</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="fitur-unggulan-list d-flex flex-row align-items-center gap-1 text-capitalizealign-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>200 GB</b> SSD storage</p>
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>backup <b>harian</b> (senilai Rp274.020)</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>SSL gratis <b>unlimited</b></span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>unlimited</b> bandwidth</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>email <b>gratis</b></span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>domain <b>gratis</b> (senilai Rp147.900)</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>CDN <b>gratis</b></span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-unggulan-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>alamat IP <b>dedicated</b></span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+							<!-- Penutup Fitur Unggulan Lists-->
+							</div>
+						<!-- Penutup Fitur Unggulan -->
+						</div>
+						
+						<div class="managed-wp d-flex flex-column gap-3">
+							<h5 class="text-start fw-bold">Managed WordPress</h5>
+							<!-- Managed WP Lists-->
+							<div class="managed-wp-lists d-flex flex-column gap-1" style="font-size: 14px;">
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1 fw-bold">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										WooCommerce Standard
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>gratis </b>migrasi website</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>Gratis</b> instalasi WordPress otomatis</p>
+								
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>WordPress </b>accelerator (LiteSpeed)</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check	</span>update <b>WordPress</b> otomatis</span>
+									</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>WordPress</b> vulnerabilities scanner</span>
+									</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>wordPress</b> multisite</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span><b>WP-CLI</b> dan SSH</span>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										tool <b>WordPress</b> staging
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										<b>Object Cache</b> untuk WordPress
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										backup <b>sesuai kebutuhan</b>
+									</span>
+								</p>
+								
+								<p class="managed-wp-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										tool AI <b>wordPress</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+							<!-- Penutup Managed WP Lists-->
+							</div>
+						<!-- Penutup Managed WP -->
+						</div>
+						
+						<div class="web-builder d-flex flex-column gap-3">
+							<h5 class="text-start fw-bold">Website Builder tanpa Coding</h5>
+							<!-- Managed WP Lists-->
+							<div class="web-builder-lists d-flex flex-column gap-1" style="font-size: 14px;">
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span>website builder <b>drag&drop</b></p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>AI</b> untuk buat website</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>150</b> template dari designer profesional</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span>integrasi <b>google analytics</b></p>
+								<p class="web-builder-list d-flex flex-row justify-content-between align-items-center gap-1 text-capitalize align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										integrasi tool <b>marketing</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>AI</b> copywriting</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>AI</b> heatmap</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span>tool <b>AI</b> SEO</p>
+								<p class="web-builder-list d-flex flex-row justify-content-between align-items-center gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										Fitur khusus <b>eCommerce</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="web-builder-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>0%</b> biaya transaksi</p>
+								<p class="web-builder-list d-flex flex-row justify-content-between align-items-center gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										<b>20+</b> Metode Pembayaran
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+							<!-- Penutup Web Builder Lists-->
+							</div>
+						<!-- Penutup Web Builder WP -->
+						</div>
+						
+						<div class="fitur-keamanan d-flex flex-column gap-3">
+							<h5 class="text-start fw-bold">Fitur Keamanan</h5>
+							<!-- Fitur Keamanan Lists-->
+							<div class="fitur-keamanan-lists d-flex flex-column gap-1" style="font-size: 14px;">
+								
+								<p class="fitur-keamanan-list d-flex flex-row align-items-center gap-1 align-items-center">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										Proteksi DDoS <b>Maksimal</b>
+								</p>
+								<p class="fitur-keamanan-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span><b>aplikasi web</b> firewall</p>
+								<p class="fitur-keamanan-list d-flex flex-row justify-content-between align-items-center gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										 Nameserver Dilindungi <b>Cloudflare</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="fitur-keamanan-list d-flex flex-row align-items-center gap-1 text-capitalize align-items-center"><span class="material-symbols-outlined text-success fw-bold">check</span>pendeteksi <b>malware</b></p>
+								<p class="fitur-keamanan-list d-flex flex-row justify-content-between align-items-center gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										 <b>Access</b> Manager
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="fitur-keamanan-list d-flex flex-row align-items-center gap-1 text-capitalize"><span class="material-symbols-outlined text-success fw-bold">check</span>gratis proteksi privasi domain WHOIS (senilai Rp147.900)</p>
+							<!-- Penutup Fitur Keamanan Lists-->
+							</div>
+						<!-- Penutup Fitur Keamanan -->
+						</div>
+						
+						<div class="service-support d-flex flex-column gap-3">
+							<h5 class="text-start fw-bold">Service and Support</h5>
+							<!-- Fitur Keamanan Lists-->
+							<div class="service-support-lists d-flex flex-column gap-1" style="font-size: 14px;">
+								
+								<p class="service-support-list d-flex flex-row align-items-center justify-content-between gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										 Jaminan <b>30 Hari</b> Uang Kembali
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="service-support-list d-flex flex-row align-items-center justify-content-between gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										 Jaminan Uptime<b>99,99%</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="service-support-list d-flex flex-row align-items-center justify-content-between gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										<b>Banyak</b> Data Center
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								<p class="service-support-list d-flex flex-row align-items-center justify-content-between gap-1 align-items-center">
+									<span class="d-flex flex-row align-items-center gap-1">
+										<span class="material-symbols-outlined text-success fw-bold">check</span>
+										 Bantuan <b>24/7</b>
+									</span>
+									<span class="material-symbols-outlined text-secondary">help</span>
+								</p>
+								
+								<p class="fitur-keamanan-list d-flex flex-row align-items-center gap-1"><span class="material-symbols-outlined text-success fw-bold">check</span>Bantuan 	 <b>Prioritas</b></p>
+							<!-- Penutup Fitur Keamanan Lists-->
+							</div>
+						<!-- Penutup Fitur Keamanan -->
+						</div>
+					<!-- Penutup Paket Hosting Body -->
+					</div>
+					
+					<!-- Paket Hosting Card Footer -->
+					<p class="paket-hosting-footer text-center m-4 d-flex align-items-center justify-content-center text-primary fw-bold">Lihat Fitur Lengkap<span class="material-symbols-outlined">expand_more</span></p>
+				<!-- Penutup Paket Hosting Card-->
+				</div>
+			<!-- Penutup Paket Hosting Card Container-->
+			</div>
+			<p class="my-5 mx-auto text-primary fw-bold">Ketentuan Pembayaran</p>
+		<!-- Penutup Section Paket Hosting -->
+		</section>
+		
+		<!-- Data Center Section -->
+		<section class="data-center container-fluid bg-body-tertiary d-flex flex-column justify-content-center align-items-center py-5">
+			<h2 class="text-black fw-bold text-center">Rasakan Kualitas Data Center Terbaik di Seluruh Dunia</h2>
+			<p class="mt-2 text-center">Lokasi server kami berada di Indonesia, Amerika Serikat, United Kingdom, Prancis, India, Singapura, Brasil, Lituania, dan Belanda.</p>
+			<div class="data-center-img mt-3 text-center">
+				<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/server-locations/web-hosting/niaga/image-2x.png" class="w-75">
+			</div>
+		</section>
+		
+		<!-- Technical Support Section -->
+		<section class="support container p-4 d-flex flex-column justify-content-around">
+			<!-- First Row -->
+			<section class="row h-100 d-flex flex-row justify-content-center align-items-center">
+				<!-- First Item -->
+				<div class="col-12 col-md-10 col-lg-5 col-xl-4">
+					<h2 class="text-black fw-bold mb-4">Hosting Kualitas Hebat & Terlengkap</h2>
+					<ul class="privilege-lists ms-0 ps-0 d-flex flex-column gap-3">
+						<li class="d-flex flex-row gap-1 text-secondary"><span class="material-symbols-outlined text-success fw-bold">check</span> Miliki hingga 100 website.</li>
+						<li class="d-flex flex-row gap-1 text-secondary"><span class="material-symbols-outlined text-success fw-bold">check</span> Tersedia nama domain gratis untuk website.<span class="material-symbols-outlined text-secondary">help</span></li>
+						<li class="d-flex flex-row gap-1 text-secondary"><span class="material-symbols-outlined text-success fw-bold">check</span> Hosting dilengkapi email bisnis profesional.<span class="material-symbols-outlined text-secondary">help</span></li>
+						<li class="d-flex flex-row gap-1 text-secondary"><span class="material-symbols-outlined text-success fw-bold">check</span> Mudah kelola website dengan managed WordPress hosting.</li>
+						<li class="d-flex flex-row gap-1 text-secondary"><span class="material-symbols-outlined text-success fw-bold">check</span> Buat website cepat dan mudah dengan Website Builder.</li>
+					</ul>
+				</div>
+				<div class="col-12 col-md-10 col-lg-5 col-xl-4">
+					<img src="https://www.niagahoster.co.id/_ipx/f_webp/h-assets/images/pages/homepage-uplift/niaga/all-in-one-website-2x.png" class="img-fluid">					
+				</div>
+				
+			</section>
+			<!-- Second Row (Testimonial) -->
+			<section class="row h-100 mt-5 d-flex flex-row justify-content-center align-items-center gap-3">
+				<div class="testimonial-card col-md-12 col-lg-3 bg-primary-subtle p-5 rounded">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/icons/google-dark-2x.png" class="mb-3">
+					<p class="mb-2">Panel kontrol Niagahoster sangat mudah digunakan bahkan untuk pengguna yang belum berpengalaman sekalipun.</p>
+					<div class="star-review mt-5 d-flex flex-row justify-content-between align-items-center">
+						<div class="stars text-warning">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<span class="material-symbols-outlined text-primary fs-3">chevron_right</span>
+					</div>
+				</div>
+				
+				<div class="testimonial-card col-md-12 col-lg-3 bg-primary-subtle p-5 rounded">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/icons/google-dark-2x.png" class="mb-3">
+					<p class="mb-2">Layanan hosting dan domain yang keren. Pengaturan mudah bahkan oleh orang awam. CS sangat responsif dan menguasai permasalahan.</p>
+					<div class="star-review mt-5 d-flex flex-row justify-content-between align-items-center">
+						<div class="stars text-warning">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<span class="material-symbols-outlined text-primary fs-3">chevron_right</span>
+					</div>
+				</div>
+				
+				<div class="testimonial-card col-md-12 col-lg-3 bg-primary-subtle p-5 rounded">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/icons/google-dark-2x.png" class="mb-3">
+					<p class="mb-3">Tempat hosting terbaik menurut saya, pelayanannya cepat dan kaya akan fitur yang membantu pengelola dan programmer agar lebih mudah menjalankan websitenya.</p>
+					<div class="star-review mt-4 d-flex flex-row justify-content-between align-items-center">
+						<div class="stars text-warning">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<span class="material-symbols-outlined text-primary fs-3">chevron_right</span>
+					</div>
+				</div>
+			</section>
+		</section>
+		
+		<!--Akses Webnsite Section -->
+		<section class="akses-website bg-body-tertiary container-fluid py-5">
+			<!-- First Row Section -->
+			<div class="row pt-5 d-flex justify-content-center align-items-center gap-5">
+				<div class="col-10 col-sm-8 col-md-6 col-xl-4">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/pages/homepage-uplift/niaga/maximize-website-speed-2x.png" class="img-fluid">
+				</div>
+				
+				<div class="col-10 col-sm-8 col-md-6 col-xl-4">
+					<h2 class="fw-bold mb-5">Akses Website Super Cepat</h2>
+					<ul class="ps-0 ms-0 d-flex flex-column gap-3">
+						<li class="d-flex gap-1 text-secondary"><span class="material-symbols-outlined text-success fw-bold">check</span> Didukung LiteSpeed Web Server untuk tingkatkan kecepatan website.</li>
+						<li class="d-flex gap-1 text-secondary"><span class="material-symbols-outlined text-success fw-bold">check</span> Performa website optimal & SEO friendly dengan fitur cache canggih.</li>
+						<li class="d-flex gap-1 text-secondary"><span class="material-symbols-outlined text-success fw-bold">check</span> Optimal untuk WordPress! Mengurangi waktu respon web hingga 3 kali lipat dengan Object Cache.</li>						
+					</ul>
+				</div>
+			</div>
+			
+			<!-- Second Row (Testimonial) -->
+			<div class="row h-100 d-flex flex-row justify-content-center align-items-center gap-3 mt-5">
+				<div class="testimonial-card col-md-12 col-lg-3 p-5 rounded">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/icons/website-planet-dark-2x.png" class="mb-3 w-50">
+					<p class="mb-2">Niagahoster memiliki performa server yang baik. Loading website yang cepat dan server yang stabil. Selain performa, keamanan hosting Niagahoster juga terjamin.</p>
+				</div>
+				
+				<div class="testimonial-card col-md-12 col-lg-3 p-5 rounded">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/icons/bitcatcha-dark-2x.png" class="mb-3 w-50">
+					<p class="mb-2">Saya melakukan speed test dan hasilnya cepat banget, pengunjung akan merasa puas dan nyaman ketika menjelajahi website Anda. Speed is king on the internet!</p>
+				</div>
+				
+				<div class="testimonial-card col-md-12 col-lg-3 p-5 rounded">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/icons/beritateknologi-dark-2x.png" class="mb-3 w-50">
+					<p class="mb-1">Page load speed sangat cepat, server yang mereka gunakan sangat luar biasa dengan jaminan uptime 99.999%.</p>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Technical Support Section -->
+		<section class="support container p-4 d-flex flex-column justify-content-around">
+			<!-- First Row -->
+			<section class="row h-100 d-flex flex-row justify-content-center align-items-center">
+				<!-- First Item -->
+				<div class="col-12 col-md-10 col-lg-5 col-xl-4">
+					<h2 class="text-black fw-bold mb-4">Dukungan Teknis Nomor 1 di Indonesia</h2>
+					<ul class="privilege-lists ms-0 ps-0 d-flex flex-column gap-3">
+						<li class="d-flex flex-row gap-1 text-secondary"><span class="material-symbols-outlined text-success fw-bold">check</span> Tersedia bantuan CS via Live Chat 24/7.</li>
+						<li class="d-flex flex-row gap-1 text-secondary"><span class="material-symbols-outlined text-success fw-bold">check</span> Tim kami siap setiap saat kapan pun Anda memerlukan bantuan.<span class="material-symbols-outlined text-secondary">help</span></li>
+						<li class="d-flex flex-row gap-1 text-secondary"><span class="material-symbols-outlined text-success fw-bold">check</span> Berbagai artikel & video panduan lengkap dan terbaik.<span class="material-symbols-outlined text-secondary">help</span></li>
+					</ul>
+				</div>
+				<div class="col-12 col-md-10 col-lg-5 col-xl-4">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/pages/homepage-uplift/niaga/customer-support-2x.png" class="img-fluid">					
+				</div>
+				
+			</section>
+			<!-- Second Row (Testimonial) -->
+			<section class="row h-100 mt-5 d-flex flex-row justify-content-center align-items-center gap-3">
+				<div class="testimonial-card col-md-12 col-lg-3 bg-primary-subtle p-5 rounded">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/icons/google-dark-2x.png" class="mb-3">
+					<p class="mb-2">Yang paling penting saat menggunakan jasa layanan hosting dan domain adalah customer support yang cakap dan fast respon. Dan Niaga hoster memiliki hal tersebut!</p>
+					<div class="star-review mt-5 d-flex flex-row justify-content-between align-items-center">
+						<div class="stars text-warning">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<span class="material-symbols-outlined text-primary fs-3">chevron_right</span>
+					</div>
+				</div>
+				
+				<div class="testimonial-card col-md-12 col-lg-3 bg-primary-subtle p-5 rounded">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/icons/google-dark-2x.png" class="mb-3">
+					<p class="mb-2">Sangat membantu, harga terjangkau namun pelayanan support yang ramah dan responsif, semua permasalahan dilayani dengan cepat dan penanganan yang tepat</p>
+					<div class="star-review mt-5 d-flex flex-row justify-content-between align-items-center">
+						<div class="stars text-warning">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<span class="material-symbols-outlined text-primary fs-3">chevron_right</span>
+					</div>
+				</div>
+				
+				<div class="testimonial-card col-md-12 col-lg-3 bg-primary-subtle p-5 rounded">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/icons/google-dark-2x.png" class="mb-3">
+					<p class="mb-3">Sudah 4 tahun saya mempercayakan domain hosting di Niagahoster, so far untuk daily support-nya sangat2 bisa di andalkan, fast respon, fast solution. Thanks</p>
+					<div class="star-review mt-5 d-flex flex-row justify-content-between align-items-center">
+						<div class="stars text-warning">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<span class="material-symbols-outlined text-primary fs-3">chevron_right</span>
+					</div>
+				</div>
+			</section>
+		</section>
+		
+		<!-- Join Section -->
+		<section class="join container d-flex flex-row justify-content-center align-items-center mt-5">
+			<div class="row text-center mb-2 d-flex flex-column justify-content-center align-items-center text-center">
+				<h2 class="fw-bold mb-5">Segera Bergabung dengan 2,002,312 Pemilik Website Lainnya</h2>
+				<button class="btn btn-primary text-light fw-bold w-75 text-center py-3 mb-4">Mulai Sekarang</button>
+				<p class="d-flex flex-row align-items-center justify-content-center gap-1"><span class="material-symbols-outlined text-success fw-bold">check</span>Garansi 30 Hari Uang Kembali<span class="material-symbols-outlined fw-semibold" >help</span></p>
+			</div>
+		</section>
+		
+		<!-- Fitur Hosting Section -->
+		<section class="hosting-feature container-fluid d-flex flex-column 	justify-content-center align-items-center bg-primary p-5">
+			<!-- First Row -->
+			<section class="row h-100 d-flex flex-row justify-content-evenly align-items-center">
+				<!-- First Item -->
+				<div class="col-12 col-md-10 col-lg-5 col-xl-5">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/pages/homepage-uplift/niaga/advanced-security-features-2x.png" class="img-fluid">					
+				</div>
+				<div class="col-12 col-md-10 col-lg-5 col-xl-4">
+					<h2 class="text-light fw-bold mb-4">Hosting dengan Fitur Keamanan Canggih</h2>
+					<ul class="privilege-lists ms-0 ps-0 d-flex flex-column gap-3">
+						<li class="d-flex flex-row gap-1 text-light"><span class="material-symbols-outlined fw-bold">check</span> SSL untuk mengamankan trafik dan transaksi di website.</li>
+						<li class="d-flex flex-row gap-1 text-light"><span class="material-symbols-outlined fw-bold">check</span> Perlindungan Cloudflare dari serangan DDoS berbahaya.</li>
+						<li class="d-flex flex-row gap-1 text-light"><span class="material-symbols-outlined fw-bold">check</span> Fitur backup otomatis untuk mencegah kehilangan data.</li>
+						<li class="d-flex flex-row gap-1 text-light"><span class="material-symbols-outlined fw-bold">check</span> Uptime 99,9% membuat website Anda online setiap saat.</li>
+					</ul>
+				</div>
+				
+			</section>
+			<!-- Second Row (Testimonial) -->
+			<section class="row h-100 mt-5 d-flex flex-row justify-content-center align-items-center gap-3">
+				<div class="testimonial-card col-md-12 col-lg-3 text-light p-5 rounded text-light" style="background: #0057b2;">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/icons/bitcatcha-light-2x.png" class="mb-3 w-75">
+					<p class="mb-2">Niagahoster mempunyai keamanan menyeluruh untuk perlindungan dari malware, virus dan berbagai serangan lainnya.</p>
+				</div>
+				
+				<div class="testimonial-card col-md-12 col-lg-3 p-5 rounded text-light" style="background: #0057b2;">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/icons/website-planet-light-2x.png" class="mb-4 w-75">
+					<p class="mb-4">Keamanan hosting Niagahoster terjamin dilengkapi SSL / HTTPS , anti DDoS dan proteksi malware.</p>
+				</div>
+				
+				<div class="testimonial-card col-md-12 col-lg-3 p-5 rounded text-light" style="background: #0057b2;">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/icons/seniberpikir-light-2x.png" class="mb-3 w-50">
+					<p class="mb-2">Fitur keamanan canggih memberikan proteksi dari serangan hacker, DDoS, BotNet, spam dan malware untuk website Anda.</p>
+				</div>
+			</section>
+		</section>
+		
+		<!-- Migrate Hosting Section -->
+		<section class="migrate container p-5 d-flex flex-column justify-content-around">
+			<!-- First Row -->
+			<section class="row h-100 d-flex flex-row justify-content-center align-items-center">
+				<!-- First Item -->
+				<div class="col-12 col-md-10 col-lg-5 col-xl-4">
+					<h2 class="text-black fw-bold mb-4">Gratis Biaya Pindah Website</h2>
+					<ul class="privilege-lists ms-0 ps-0 d-flex flex-column gap-3">
+						<li class="d-flex flex-row gap-1 text-secondary"><span class="material-symbols-outlined text-success fw-bold">check</span> Transfer website lebih mudah menggunakan tools migrasi otomatis.</li>
+						<li class="d-flex flex-row gap-1 text-secondary"><span class="material-symbols-outlined text-success fw-bold">check</span> Bantuan responsif CS via Live Chat 24/7.</li>
+						<li class="d-flex flex-row gap-1 text-secondary"><span class="material-symbols-outlined text-success fw-bold">check</span> Proses transfer website cepat hanya dalam waktu 24 jam.</li>
+					</ul>
+				</div>
+				<div class="col-12 col-md-10 col-lg-5 col-xl-4">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/pages/homepage-uplift/niaga/free-migration-2x.png" class="img-fluid">					
+				</div>
+				
+			</section>
+			<!-- Second Row (Testimonial) -->
+			<section class="row h-100 mt-5 d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+				<div class="testimonial-card col-md-12 col-lg-3 bg-primary-subtle p-5 rounded">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/icons/google-dark-2x.png" class="mb-3">
+					<p class="mb-2">Well maintained and service for every web developer needs! CS team is super fast and super helpful. Most trusted hosting provider so far :)</p>
+					<div class="star-review mt-4 d-flex flex-row justify-content-between align-items-center">
+						<div class="stars text-warning">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<span class="material-symbols-outlined text-primary fs-3">chevron_right</span>
+					</div>
+				</div>
+				
+				<div class="testimonial-card col-md-12 col-lg-3 bg-primary-subtle p-5 rounded">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/icons/google-dark-2x.png" class="mb-3">
+					<p class="mb-2">Salah satu penyedia jasa yang selalu saya pakai untuk membangun bisnis client saya. Terimakasih Niagahoster, telah menjadi bagian cerita sukses mereka!</p>
+					<div class="star-review mt-4 d-flex flex-row justify-content-between align-items-center">
+						<div class="stars text-warning">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<span class="material-symbols-outlined text-primary fs-3">chevron_right</span>
+					</div>
+				</div>
+				
+				<div class="testimonial-card col-md-12 col-lg-3 bg-primary-subtle p-5 rounded">
+					<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/images/icons/google-dark-2x.png" class="mb-3">
+					<p class="mb-2">Sudah 4 tahun saya mempercayakan domain hosting di Niagahoster, so far untuk daily support-nya sangat2 bisa di andalkan, fast respon, fast solution. Thanks</p>
+					<div class="star-review mt-4 d-flex flex-row justify-content-between align-items-center">
+						<div class="stars text-warning">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<span class="material-symbols-outlined text-primary fs-3">chevron_right</span>
+					</div>
+				</div>
+			</section>
+		</section>
+		
+		<!-- Customer Success Story Section -->
+		<section class="container customer-satisfaction my-5 mx-auto d-flex flex-column gap-4 justify-content-center align-items-center">
+			<h2 class="fw-bold text-center">Dipercaya oleh Berbagai Pemilik Website di Seluruh Indonesia</h2>
+			<!-- Cards Container -->
+			<div class="row gap-5 p-4">
+				<div class="card col-lg">
+					<!-- Card body -->
+					<div class="card-body d-flex flex-column gap-4 p-5">
+						<div class="stars text-primary d-flex gap-1">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<!-- Testimonial Quote-->
+						<p class="card-text">Web hosting terbaik yang pernah saya pakai selama bertahun-tahun. Karena selain cepat dan aman, customer supportnya pun luar bisa membantu ketika ada kesulitan.</p>
+					</div>
+					<div class="card-footer d-flex flex-row align-items-center gap-3 w-100 px-5 py-4">
+						<img src="https://niagahoster.co.id/_ipx/f_webp/h-assets/client-stories/sandika-galih-2x.png" style="width: 64px;">
+						<div class="person d-flex flex-column gap-2">
+							<span class="text-black fw-bold">Sandhika Galih</span>
+							<span class="fw-medium">Youtuber</span>
+						</div>
+					</div>
+				</div>
+				<div class="card col-lg">
+					<!-- Card body -->
+					<div class="card-body d-flex flex-column gap-4 p-5">
+						<div class="stars text-primary d-flex gap-1">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<!-- Testimonial Quote-->
+						<p class="card-text">Selama ini saya kesulitan ketika memilih hosting atau mencari domain. Bersyukur ada Niagahoster yang super baik Customer Servicenya. Saya rekomen untuk semua pengusaha yang mencari hosting yang reliable boleh beralih ke Niagahoster.</p>
+					</div>
+					<div class="card-footer d-flex flex-row align-items-center gap-3 w-100 px-5 py-4">
+						<img src="https://www.niagahoster.co.id/_ipx/f_webp/h-assets/client-stories/tom-mc-ifle-2x.png" style="width: 64px;">
+						<div class="person d-flex flex-column gap-2">
+							<span class="text-black fw-bold">Tom Mc Ifle</span>
+							<span class="fw-medium">Founder Top Coach</span>
+						</div>
+					</div>
+				</div>
+				<div class="card col-lg">
+					<!-- Card body -->
+					<div class="card-body d-flex flex-column gap-4 p-5">
+						<div class="stars text-primary d-flex gap-1">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<!-- Testimonial Quote-->
+						<p class="card-text">Selain unggul di kecepatan loading dan keamanan server, Niagahoster juga punya layanan CS 24/7 yang full support banget. Jadi, selalu nyaman pakainya.</p>
+					</div>
+					<div class="card-footer d-flex flex-row align-items-center gap-3 w-100 px-5 py-4">
+						<img src="https://www.niagahoster.co.id/_ipx/f_webp/h-assets/client-stories/andrie-andropia-2x.png" style="width: 64px;">
+						<div class="person d-flex flex-column gap-2">
+							<span class="text-black fw-bold">Andrie Andropia</span>
+							<span class="fw-medium">Mastah Facebook Ads</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- CTA Button -->
+			<button class="btn btn-outline-primary p-3 text-center fw-bold fs-6 w-50">Lihat testimoni pelanggan</button>
+		</section>
+		
+		<!-- Join Section -->
+		<section class="join container d-flex flex-row justify-content-center align-items-center my-5">
+			<div class="row text-center mb-2 d-flex flex-column justify-content-center align-items-center">
+				<h2 class="fw-bold mb-5">Segera Bergabung dengan 2,002,312 Pemilik Website Lainnya</h2>
+				<button class="btn btn-primary text-light fw-bold w-75 py-3 mb-4">Mulai Sekarang</button>
+				<p class="d-flex flex-row align-items-center justify-content-center gap-1"><span class="material-symbols-outlined text-success fw-bold">check</span>Garansi 30 Hari Uang Kembali<span class="material-symbols-outlined fw-semibold" >help</span></p>
+			</div>
+		</section>
+		
+		<!-- Footer Section -->
+		<footer class="bg-body-tertiary">
+			<!--Top Footer -->
+			<section class="top-footer container d-flex flex-column flex-xl-row justify-content-evenly p-4 gap-5">
+				<!-- Top Left Footer -->
+				<div class="top-left-footer d-flex flex-column col-12 col-xl-4">
+					<img src="https://www.niagahoster.co.id/h-assets/svg/icons/logos/niagahoster-logo.svg#svgView(viewBox(0%200%20192%2030))" style="width:192px;height:30px;filter:brightness(0) saturate(100%) invert(30%) sepia(82%) saturate(2961%) hue-rotate(199deg) brightness(104%) contrast(103%);" class="img-fluid mb-4">
+					<p>Kami hadir untuk membantu jutaan orang memanfaatkan potensi internet untuk bangun kesuksesan online.</p>
+					<p>Kami terus menyempurnakan teknologi server, bantuan profesional, dan layanan web hosting kami.</p>
+				</div>			
+				<!-- Top Right Footer -->
+				<div class="top-right-footer d-none flex-row justify-content-between col-8 d-md-flex">
+					<!-- First Menu Row -->
+					<div class="row d-flex flex-column gap-5">
+						<!-- Hosting Footer Menu -->
+						<div class="desktop-footer">
+							<h4 class="fw-bold text-uppercase mb-4">hosting</h4>
+							<div class="desktop-footer-links d-flex flex-column gap-2" class="text-black">
+								<a href="https://www.niagahoster.co.id/hosting-indonesia" class="text-black">Web Hosting</a>
+								<a href="https://www.niagahoster.co.id/cloud-vps-hosting" class="text-black">VPS Hosting</a>
+								<a href="https://www.niagahoster.co.id/cyberpanel-vps" class="text-black"> CyberPanel VPS Hosting</a>
+								<a href="https://www.niagahoster.co.id/cloud-hosting" class="text-black"> Clod Hosting</a>
+								<a href="https://www.niagahoster.co.id/wordpress-hosting" class="text-black">WordPress Hosting</a>
+								<a href="https://www.niagahoster.co.id/email-hosting" class="text-black">Email Hosting</a>
+								<a href="https://www.niagahoster.co.id/google-workspace" class="text-black">Google Workspace</a>
+								<a href="https://www.niagahoster.co.id/hosting-gratis" class="text-black">Hosting Gratis</a>
+								<a href="https://www.niagahoster.co.id/hosting-murah" class="text-black">Hosting Murah</a>
+							</div>
+						</div>
+						
+						<!-- Domain Footer Menu -->
+						<div class="hosting-footer">
+							<h4 class="fw-bold text-uppercase mb-4">domain</h4>
+							<div class="desktop-footer-links d-flex flex-column gap-2" class="text-black">
+								<a href="https://www.niagahoster.co.id/domain-murah" class="text-black">Domain Murah</a>
+								<a href="https://www.niagahoster.co.id/transfer-domain" class="text-black">Transfer Domain</a>
+								<a href="https://www.niagahoster.co.id/domain-gratis" class="text-black"> Domain Gratis</a>
+								<a href="https://www.niagahoster.co.id/harga-domain" class="text-black"> Harga Domain</a>
+								<a href="https://www.niagahoster.co.id/whois" class="text-black">WHOIS</a>
+								<a href="https://www.niagahoster.co.id/ssl-gratis" class="text-black">SSL Gratis</a>
+								<a href="https://www.niagahoster.co.id/tld/domain-com" class="text-black">Domain .COM</a>
+								<a href="https://www.niagahoster.co.id/tld/domain-id" class="text-black">Domain .ID</a>
+							</div>
+						</div>
+						<!-- Web Builder Footer Menu -->
+						<div class="tool-footer">
+							<h4 class="fw-bold text-uppercase mb-4">tool</h4>
+							<div class="desktop-footer-links d-flex flex-column gap-2" class="text-black">
+								<a href="https://www.niagahoster.co.id/website-builder" class="text-black">Website Builder</a>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Second Row -->
+					<div class="row d-flex flex-column gap-5">
+						<div class="informasi-footer">
+							<h4 class="fw-bold text-uppercase mb-4">informasi</h4>
+							<div class="desktop-footer-links d-flex flex-column gap-2" class="text-black">
+								<a href="https://www.niagahoster.co.id/transfer-hosting" class="text-black">Transfer Hosting</a>
+								<a href="https://status.niagahoster.co.id/?_ga=2.235870467.387460716.1705329290-2029327451.1705329290" class="text-black">Status Layanan</a>
+								<a href="https://www.niagahoster.co.id/pembayaran" class="text-black"> Ketentuan Pembayaran</a>
+								<a href="https://www.niagahoster.co.id/reviews" class="text-black"> 	Review Pelanggan</a>
+							</div>						
+						</div>
+						
+						<div class="legal-footer">
+							<h4 class="fw-bold text-uppercase mb-4">legal</h4>
+							<div class="desktop-footer-links d-flex flex-column gap-2" class="text-black">
+								<a href="https://www.niagahoster.co.id/legal/kebijakan-privasi" class="text-black">Kebijakan Privasi</a>
+								<a href="https://www.niagahoster.co.id/legal/perjanjian-ketentuan-layanan-universal" class="text-black">Syarat dan Ketentuan</a>
+							</div>						
+						</div>
+						
+						<div class="perusahaan-footer">
+							<h4 class="fw-bold text-uppercase mb-4">perusahaan</h4>
+							<div class="desktop-footer-links d-flex flex-column gap-2" class="text-black">
+								<a href="https://www.niagahoster.co.id/about-us" class="text-black">Tentang Niagahoster</a>
+								<a href="https://www.niagahoster.co.id/datacenter-hosting" class="text-black">Data Center</a>
+								<a href="https://www.niagahoster.co.id/karir" class="text-black"> Career</a>
+								<a href="https://www.niagahoster.co.id/kontak" class="text-black"> Kontak</a>
+							</div>						
+						</div>
+						
+						<div class="bantuan-footer">
+							<h4 class="fw-bold text-uppercase mb-4">bantuan</h4>
+							<div class="desktop-footer-links d-flex flex-column gap-2" class="text-black">
+								<a href="https://www.niagahoster.co.id/blog/" class="text-black">Blog</a>
+								<a href="https://support.niagahoster.co.id/?_ga=2.198228653.387460716.1705329290-2029327451.1705329290" class="text-black">Panduan Pengguna</a>
+								<a href="https://www.niagahoster.co.id/report-abuse" class="text-black"> Laporkan Penyalahgunaan</a>
+							</div>						
+						</div>
+						
+					</div>
+				</div>
+				
+				<!-- Mobile Footer Menu-->
+				<div class="container">
+					<div class="row d-flex d-md-none flex-column gap-4">
+						<div class="accordion" id="accordionExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed text-black text-uppercase fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+										hosting
+									</button>
+								</h2>
+								<div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+									<div class="accordion-body px-0 d-flex flex-column gap-3">
+										<a href="https://www.niagahoster.co.id/hosting-indonesia" class="text-black">Web Hosting</a>
+										<a href="https://www.niagahoster.co.id/cloud-vps-hosting" class="text-black">VPS Hosting</a>
+										<a href="https://www.niagahoster.co.id/cyberpanel-vps" class="text-black"> CyberPanel VPS Hosting</a>
+										<a href="https://www.niagahoster.co.id/cloud-hosting" class="text-black"> Clod Hosting</a>
+										<a href="https://www.niagahoster.co.id/wordpress-hosting" class="text-black">WordPress Hosting</a>
+										<a href="https://www.niagahoster.co.id/email-hosting" class="text-black">Email Hosting</a>
+										<a href="https://www.niagahoster.co.id/google-workspace" class="text-black">Google Workspace</a>
+										<a href="https://www.niagahoster.co.id/hosting-gratis" class="text-black">Hosting Gratis</a>
+										<a href="https://www.niagahoster.co.id/hosting-murah" class="text-black">Hosting Murah</a>
+									</div>
+								</div>
+							</div>
+							
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed text-black fw-bold text-uppercase text-black" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+										domain
+									</button>
+								</h2>
+								<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+									<div class="accordion-body px-0 d-flex flex-column gap-3">
+										<a href="https://www.niagahoster.co.id/domain-murah" class="text-black">Domain Murah</a>
+										<a href="https://www.niagahoster.co.id/transfer-domain" class="text-black">Transfer Domain</a>
+										<a href="https://www.niagahoster.co.id/domain-gratis" class="text-black"> Domain Gratis</a>
+										<a href="https://www.niagahoster.co.id/harga-domain" class="text-black"> Harga Domain</a>
+										<a href="https://www.niagahoster.co.id/whois" class="text-black">WHOIS</a>
+										<a href="https://www.niagahoster.co.id/ssl-gratis" class="text-black">SSL Gratis</a>
+										<a href="https://www.niagahoster.co.id/tld/domain-com" class="text-black">Domain .COM</a>
+										<a href="https://www.niagahoster.co.id/tld/domain-id" class="text-black">Domain .ID</a>
+									</div>
+								</div>
+							</div>
+							
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed fw-bold text-black text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+										tool
+									</button>
+								</h2>
+								<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+									<div class="accordion-body d-flex flex-column px-0 gap-3">
+										<a href="https://www.niagahoster.co.id/website-builder" class="text-black">Website Builder</a>
+									</div>
+								</div>
+							</div>
+							
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed fw-bold text-black text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+										informasi
+									</button>
+								</h2>
+								<div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+									<div class="accordion-body d-flex flex-column px-0 gap-3">
+										<a href="https://www.niagahoster.co.id/transfer-hosting" class="text-black">Transfer Hosting</a>
+										<a href="https://status.niagahoster.co.id/?_ga=2.235870467.387460716.1705329290-2029327451.1705329290" class="text-black">Status Layanan</a>
+										<a href="https://www.niagahoster.co.id/pembayaran" class="text-black"> Ketentuan Pembayaran</a>
+										<a href="https://www.niagahoster.co.id/reviews" class="text-black"> 	Review Pelanggan</a>
+									</div>
+								</div>
+							</div>
+							
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed fw-bold text-black text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+										legal
+									</button>
+								</h2>
+								<div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+									<div class="accordion-body d-flex flex-column px-0 gap-3">
+										<a href="https://www.niagahoster.co.id/legal/kebijakan-privasi" class="text-black">Kebijakan Privasi</a>
+										<a href="https://www.niagahoster.co.id/legal/perjanjian-ketentuan-layanan-universal" class="text-black">Syarat dan Ketentuan</a>
+									</div>
+								</div>
+							</div>
+							
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed fw-bold text-black text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+										perusahaan
+									</button>
+								</h2>
+								<div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+									<div class="accordion-body d-flex flex-column px-0 gap-3">
+										<a href="https://www.niagahoster.co.id/about-us" class="text-black">Tentang Niagahoster</a>
+										<a href="https://www.niagahoster.co.id/datacenter-hosting" class="text-black">Data Center</a>
+										<a href="https://www.niagahoster.co.id/karir" class="text-black"> Career</a>
+										<a href="https://www.niagahoster.co.id/kontak" class="text-black"> Kontak</a>
+									</div>
+								</div>
+							</div>
+							
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed fw-bold text-black text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+										bantuan
+									</button>
+								</h2>
+								<div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+									<div class="accordion-body d-flex flex-column px-0 gap-3">
+										<a href="https://www.niagahoster.co.id/blog/" class="text-black">Blog</a>
+										<a href="https://support.niagahoster.co.id/?_ga=2.198228653.387460716.1705329290-2029327451.1705329290" class="text-black">Panduan Pengguna</a>
+										<a href="https://www.niagahoster.co.id/report-abuse" class="text-black"> Laporkan Penyalahgunaan</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+			<!-- SOcmed Icons -->
+			<div class="socmed-icons container d-flex flex-row gap-3 justify-content-md-end justify-content-center mt-5 pt-5">
+				<hr class="my-5">
+				<a href="https://www.linkedin.com/company/niagahoster"><img src="https://www.niagahoster.co.id/h-assets/svg/icons/social-icons/ic-linked-in.svg#svgView(viewBox(0%200%2018%2018))"></a>
+				<a href="https://www.facebook.com/Niagahoster"><img src="https://www.niagahoster.co.id/h-assets/svg/icons/social-icons/ic-facebook.svg#svgView(viewBox(0%200%2018%2018))"></a>
+				<a href="https://www.instagram.com/niagahoster.id"><img src="https://www.niagahoster.co.id/h-assets/svg/icons/social-icons/ic-instagram.svg#svgView(viewBox(0%200%2018%2018))"></a>
+				<a href="https://www.twitter.com/niagahoster"><img src="https://www.niagahoster.co.id/h-assets/svg/icons/social-icons/ic-twitter.svg#svgView(viewBox(0%200%2018%2018))"></a>
+				<a href="https://www.youtube.com/channel/UCEj5t40X7DDIptSCsm4cryw"><img src="https://www.niagahoster.co.id/h-assets/svg/icons/social-icons/ic-youtube.svg#svgView(viewBox(0%200%2018%2018))"></a>
+			</div>
+			<!-- Copyright -->
+			<section class="container copyright d-flex flex-column flex-xl-row justify-content-between py-4">
+				<p>© 2024 niagahoster.co.id - Premium Web Hosting, Cloud Hosting, VPS, AI Website Builder, & Domain.</p>
+				<p>Harga belum termasuk PPN</a>
+			</section>
+		</footer>
+		<!-- Bootstrap JS CDN -->
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+	<script>
+		let desktopNavbar = document.querySelector('.desktop-navbar');
+		let dropdownHostingTrigger = document.querySelector('.dropdown-hosting-trigger');
+		let dropdownVPSTrigger = document.querySelector('.dropdown-vps-trigger');
+		let dropdownDomainTrigger = document.querySelector('.dropdown-domain-trigger');
+		
+		let dropdownDesktopHosting = document.querySelector('.dropdown-desktop-hosting');
+		let dropdownDesktopVPS = document.querySelector('.dropdown-desktop-vps');
+		let dropdownDesktopDomain = document.querySelector('.dropdown-desktop-domain');
+		
+		dropdownHostingTrigger.addEventListener('click', () => {
+			dropdownDesktopHosting.classList.toggle("d-none");
+			dropdownDesktopHosting.classList.toggle("open");
+			dropdownHostingTrigger.classList.toggle("rotate");
+		});
+		
+		dropdownVPSTrigger.addEventListener('click', () => {
+			dropdownDesktopVPS.classList.toggle("d-none");
+			dropdownDesktopVPS.classList.toggle("open");
+			dropdownVPSTrigger.classList.toggle("rotate");
+		});
+		
+		dropdownDomainTrigger.addEventListener('click', () => {
+			dropdownDesktopDomain.classList.toggle("d-none");
+			dropdownDesktopDomain.classList.toggle("open");
+			dropdownDomainTrigger.classList.toggle("rotate");
+		});
+		
+		// MObile Menu Code
+		let hamburgerMenu = document.querySelector('.mobile-hamburger-menu');
+		let mobileMenu = document.querySelector('.mobile-menu');
+		let mobileMenuClose = document.querySelector('.mobile-menu-close');
+		
+		hamburgerMenu.addEventListener('click', () => {
+			mobileMenu.classList.remove('d-none');
+			mobileMenu.classList.add('d-block');
+		});
+		
+		mobileMenuClose.addEventListener('click', () => {
+			mobileMenu.classList.add('d-none');
+			mobileMenu.classList.remove('d-block');
+		});
+		
+		// Kode untuk menganimasikan navbar saat discroll
+		document.addEventListener('scroll', () => {
+			if (window.scrollY > 0) {
+				desktopNavbar.classList.add('scrolled');
+			} else {
+				desktopNavbar.classList.remove('scrolled');
+			}
+		});
+		
+		// Countdown Timker Code
+		// variabel untuk menyimpan waktu yang telah ditentukan
+		let countdownDate = new Date("Jan 20, 2024 16:00:00").getTime();
+		let x = setInterval(function(){
+			// vriabel untuk menyimpan waktu saat ini
+			var now = new Date().getTime();
+			// variabel untuk menyimpan selisih waktu yang ditetapkan dengan saat ini
+			var distance = countdownDate - now;
+			
+			// Variabel untukm mengkalkulasi countdownnya
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			
+			// cek, jika detiknya hanya satu digit, maka tambahkan angka 0 di depan
+			if (seconds.toString().length < 2) {
+				seconds = "0"+seconds;
+			}
+			
+			// cek, jika menitnya hanya satu digit, maka tambahkan angka 0 di depan
+			if (minutes.toString().length < 2) {
+				minutes = "0" + minutes;
+			}
+			
+			if (hours.toString().length < 2) {
+				hours = "0" + hours;
+			}
+			
+			if (days.toString().length < 2) {
+				days = "0" + days;
+			}
+			
+			// Kode untuk menginput nilai variabel diatas ke dalam countdownnya
+			document.getElementById('countdownDays').innerHTML = days;
+			document.getElementById('countdownHours').innerHTML = hours;
+			document.getElementById('countdownMins').innerHTML = minutes;
+			document.getElementById('countdownSecs').innerHTML = seconds;
+		}, 1000);
+		
+		// kode untuk membuat accrodion footer mobile menu
+		let hostingMobileFooter = document.querySelector('.hosting-mobile-footer');
+		let hostingMobileLinks = document.querySelector('.hosting-mobile-links');
+		
+		hostingMobileFooter.addEventListener('click', () => {
+			hostingMobileLinks.classList.toggle('d-none');
+		});
+	</script>
+	</body>
+</html>
